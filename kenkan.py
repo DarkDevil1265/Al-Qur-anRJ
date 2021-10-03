@@ -8,7 +8,7 @@ import os
 from config import TOKEN
 import logging
 
-logging.basicConfig(filename="bot.log", format="%(asctime)s - %(levelname)s - %(message)s",
+logging.basicConfig(filenam,e="bot.log", format="%(asctime)s - %(levelname)s - %(message)s",
                         datefmt="%Y/%m/%d %I:%M:%S %p", level=0)
 error_img = "https://image.freepik.com/free-vector/error-neon-signs-style-text_118419-3023.jpg"
 
@@ -99,8 +99,7 @@ def message_handler(message):
             open_page(text, *user_info, with_markup= not text.startswith(('ambil halaman')))
         except Exception as err:
             BOT.reply_to(message, err)
-    elif text in ['/repo']:
-        BOT.reply_to(message, "AL Qur-an Bot\n\nHow To Own This AL Qur-An Bot\n\n https://youtu.be/8kJFSGQU8PA")
+ 
 
 @BOT.callback_query_handler(func=lambda call:True)
 def query_handler(call):
